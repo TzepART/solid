@@ -22,7 +22,7 @@ class Runner implements RunnerInterface
         ];
 
         $priceCalculator = new BadPriceCalculator($items);
-        echo sprintf('Order sum %f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
+        echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 
         foreach ($priceCalculator->getFormattedPrices() as $i => $formattedPrice) {
             echo sprintf('Item #%d - %s'.PHP_EOL, $i, $formattedPrice);
@@ -43,7 +43,7 @@ class Runner implements RunnerInterface
         ];
 
         $priceCalculator = new GoodPriceCalculator($items);
-        echo sprintf('Order sum %f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
+        echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 
         $priceFormatter = new PriceFormatter($items);
         foreach ($priceFormatter->getFormattedPrices() as $i => $formattedPrice) {

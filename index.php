@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use App\SingleResponsibility\Runner;
+//use App\SingleResponsibility\Runner;
+use App\OpenClosed\Runner;
 
 //'USD'
 //'GBP'
