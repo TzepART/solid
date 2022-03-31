@@ -27,7 +27,8 @@ class Runner implements RunnerInterface
 
         $priceCalculator = new ProblemPriceCalculator($items);
         /**
-         * We have problem with method calculateItemsPrices()
+         * We have problem with method calculateItemsPrices(). When we will add new class of Item
+         * we will have to add if-section in method calculateItemsPrices. This's bad.
          */
         echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
     }
