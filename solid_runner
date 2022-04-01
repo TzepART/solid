@@ -1,13 +1,9 @@
+#!/usr/bin/env php
 <?php
 
 declare(strict_types=1);
 
 require 'vendor/autoload.php';
-
-//use App\SingleResponsibility\Runner;
-//use App\OpenClosed\Runner;
-//use App\LiskovSubstitution\Runner;
-use App\InterfaceSegregation\Runner;
 
 /**
  * Single-responsibility Principle (SRP):
@@ -26,10 +22,28 @@ use App\InterfaceSegregation\Runner;
  */
 
 /**
- * Interface segregation principle (ISP):
+ * Interface Segregation Principle (ISP):
  * A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
  */
 
-$runner = new Runner();
+/**
+ * Dependency Inversion Principle (DIP):
+ * Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend
+ * on the low-level module, but they should depend on abstractions.
+ */
+
+$runners = [
+    'SRP' => App\SingleResponsibility\Runner::class,
+    'OCP' => App\OpenClosed\Runner::class,
+    'LSP' => App\LiskovSubstitution\Runner::class,
+    'ISP' => App\InterfaceSegregation\Runner::class,
+    'DIP' => App\DependencyInversion\Runner::class,
+];
+
+if(!isset($argv[1]) || !in_array($argv[1], array_keys($runners))){
+    return;
+}
+
+$runner = new $runners[$argv[1]];
 $runner->problemRun();
 $runner->solutionRun();
