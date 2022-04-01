@@ -24,7 +24,7 @@ class Runner implements RunnerInterface
         $discount = 0.2;
 
         $calculators = [
-            'Usual calculator' => new ProblemPriceCalculator($items),
+            'Simple calculator' => new ProblemPriceCalculator($items),
             'Calculator with discount' => (new ProblemPriceCalculatorWithDiscount($items))->setDiscount($discount),
         ];
 
@@ -60,14 +60,14 @@ class Runner implements RunnerInterface
         $discount = 0.2;
 
         $calculators = [
-            'Usual calculator' => new SolutionPriceCalculator($items),
+            'Simple calculator' => new SolutionPriceCalculator($items),
             'Calculator with discount' => (new SolutionPriceCalculatorWithDiscount($items))->setDiscount($discount),
         ];
 
         // ... some layer of business logic
 
         /**
-         * Solution add method calculateItemsPricesWithDiscount(), which will not rewrite calculateItemsPrices()
+         * Solution - add method calculateItemsPricesWithDiscount(), which will not rewrite calculateItemsPrices()
          * Then output:
          *              Calculation without discount. Order sum 101.96
          *              Calculation without discount. Order sum 101.96 // Everything is FINE!!!

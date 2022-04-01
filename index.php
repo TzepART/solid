@@ -6,11 +6,8 @@ require 'vendor/autoload.php';
 
 //use App\SingleResponsibility\Runner;
 //use App\OpenClosed\Runner;
-use App\LiskovSubstitution\Runner;
-
-//'USD'
-//'GBP'
-//'EUR'
+//use App\LiskovSubstitution\Runner;
+use App\InterfaceSegregation\Runner;
 
 /**
  * Single-responsibility Principle (SRP):
@@ -26,6 +23,11 @@ use App\LiskovSubstitution\Runner;
  * Liskov Substitution Principle (LSP):
  * Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
  * This means that every subclass or derived class should be substitutable for their base or parent class.
+ */
+
+/**
+ * Interface segregation principle (ISP):
+ * A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
  */
 
 $runner = new Runner();
