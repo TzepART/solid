@@ -1,4 +1,6 @@
 ## Liskov Substitution Principle (LSP)
+Definition:
+This principle means that every subclass or derived class should be substitutable for their base or parent class.
 
 Problem:
 ```php
@@ -91,16 +93,14 @@ Calculation without discount. Order sum 81.57
 Calculation with discount. Order sum 81.57
 ```
 
-Because we have an object instanceof of simple ProblemPriceCalculator we'll expect that method calculateItemsPrices()
-will return price without discount. But output:
+Because we have an object instanceof of simple ProblemPriceCalculator we'll expect that method calculateItemsPrices() will return price without discount. But output:
 ```
 Calculation without discount. Order sum 101.96
 Calculation without discount. Order sum 81.57 // Error here!!!
 Calculation with discount. Order sum 81.57
 ```
 
-Because ProblemPriceCalculatorWithDiscount violates the Liskov Substitution principle. We can't use
-an object of class ProblemPriceCalculatorWithDiscount instead object of class ProblemPriceCalculator
+Because ProblemPriceCalculatorWithDiscount violates the Liskov Substitution principle. We can't use an object of class ProblemPriceCalculatorWithDiscount instead object of class ProblemPriceCalculator
 
 Solution - add method calculateItemsPricesWithDiscount(), which will not rewrite calculateItemsPrices()
 
