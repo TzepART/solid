@@ -70,13 +70,10 @@ $priceCalculator = new ProblemPriceCalculator($items);
 echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 ```
 
-Run:
+Run/Output:
 ```
-php solid_runner OCP
-```
+> php solid_runner OCP
 
-Output:
-```
 Order sum 220.52
 ```
 
@@ -166,7 +163,9 @@ $priceCalculator = new SolutionPriceCalculator($items);
 echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 ```
 
-Output:
+Run/Output:
 ```
+> php solid_runner OCP
+
 Order sum 220.52
 ```

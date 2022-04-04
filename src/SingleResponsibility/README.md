@@ -61,13 +61,10 @@ foreach ($priceCalculator->getFormattedPrices() as $i => $formattedPrice) {
 }
 ```
 
-Run:
+Run/Output:
 ```
-php solid_runner SRP
-```
+> php solid_runner SRP
 
-Output:
-```
 Order sum 290.36
 Item #0 - 33.20 USD
 Item #1 - 55.20 USD
@@ -162,8 +159,10 @@ for($i = 0; $i < count($items); $i++){
 }
 ```
 
-Output:
+Run/Output:
 ```
+> php solid_runner SRP
+
 Order sum 290.36
 Item #0 - price 33.20 USD, price with symbol 33.20 $
 Item #1 - price 55.20 USD, price with symbol 55.20 $
