@@ -13,7 +13,7 @@ class PriceCalculator
     {}
 
     /**
-     * Consider a scenario where the we want to calculate of additional prices, such as discount prices, markup prices, etc.
+     * Consider a scenario where we want to calculate of additional prices, such as discount prices, markup prices, etc.
      * You would have to constantly edit this file and add additional if/else blocks. This would break the open-closed principle.
      */
     public function calculateItemsPrices(): float
