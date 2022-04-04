@@ -79,10 +79,10 @@ Run/Output:
 Order sum 220.52
 ```
 
-We have problem with method calculateItemsPrices(). When we will add new class of Item
-we will have to add if-section in method calculateItemsPrices(). This's bad.
+We have problem with method **calculateItemsPrices()**. When we will add new class of **Item**
+we will have to add if-section in method **calculateItemsPrices()**. This's bad.
 
-Solution is adding ResultPriceInterface and using objects which implement this interface in method calculateItemsPrices().
+Solution is adding **ResultPriceInterface** and using objects which implement this interface in method **calculateItemsPrices()**.
 
 Solution:
 ```php

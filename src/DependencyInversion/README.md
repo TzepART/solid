@@ -68,10 +68,10 @@ Run/Output:
 > php solid_runner DIP
 ```
 
-MySQLOrderDataProvider is the low-level module while the OrderRepository is high level, but according to the definition of D in SOLID, which states to depend on abstraction, not on concretions.
-The case above violates this principle as the OrderRepository class is being forced to depend on the MySQLOrderDataProvider class.
+**MySQLOrderDataProvider** is the low-level module while the **OrderRepository** is high-level, but according to the definition of D in SOLID, which states to depend on abstraction, not on concretions.
+The case above violates this principle as the **OrderRepository** class is being forced to depend on the **MySQLOrderDataProvider** class.
 
-Solution is adding an abstraction (DataProviderInterface), then details (DataProviders, OrderRepository) will depend on abstraction (DataProviderInterface).
+Solution is adding an abstraction (**DataProviderInterface**), then details (**DataProviders**, **OrderRepository**) will depend on abstraction (**DataProviderInterface**).
 
 Solution:
 ```php

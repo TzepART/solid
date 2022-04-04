@@ -93,16 +93,16 @@ Calculation without discount. Order sum 81.57
 Calculation with discount. Order sum 81.57
 ```
 
-Because we have an object instanceof of simple ProblemPriceCalculator we'll expect that method calculateItemsPrices() will return price without discount. But output:
+Because we have an object instanceof of simple **PriceCalculator** we'll expect that method **calculateItemsPrices()** will return price without discount. But output:
 ```
 Calculation without discount. Order sum 101.96
 Calculation without discount. Order sum 81.57 // Error here!!!
 Calculation with discount. Order sum 81.57
 ```
 
-Because ProblemPriceCalculatorWithDiscount violates the Liskov Substitution principle. We can't use an object of class ProblemPriceCalculatorWithDiscount instead object of class ProblemPriceCalculator
+Because **PriceCalculatorWithDiscount** violates the Liskov Substitution principle. We can't use an object of class **PriceCalculatorWithDiscount** instead object of class **PriceCalculator**
 
-Solution - add method calculateItemsPricesWithDiscount(), which will not rewrite calculateItemsPrices()
+Solution - add method **calculateItemsPricesWithDiscount()**, which will not rewrite **calculateItemsPrices()**
 
 Solution:
 ```php

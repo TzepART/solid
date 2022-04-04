@@ -90,8 +90,8 @@ Price 33.44
 Discount 0.30
 ```
 
-Main problem is a interface ProblemPriceInterface. Some classes which implement this interface have to implement methods which they will not use.
-For example, ProblemSimpleItem implements not used methods getDiscount() and getAdditionalPrice(). ProblemDiscountItem implements not used method getAdditionalPrice().
+Main problem is a interface **PriceInterface**. Some classes which implement this interface have to implement methods which they will not use.
+For example, **SimpleItem** implements not used methods **getDiscount()** and **getAdditionalPrice()**. **DiscountItem** implements not used method **getAdditionalPrice()**.
 
 
 Solution:
@@ -173,5 +173,5 @@ Price 33.44
 Discount 0.30
 ````
 
-We divided ProblemPriceInterface into several interfaces (SolutionPriceInterface, SolutionDiscountInterface, SolutionAdditionalPriceInterface).
+We divided **PriceInterface** into several interfaces (**PriceInterface**, **DiscountInterface**, **AdditionalPriceInterface**).
 As result - we implemented only the necessary methods
