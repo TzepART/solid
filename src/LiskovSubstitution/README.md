@@ -106,7 +106,57 @@ Solution - add method calculateItemsPricesWithDiscount(), which will not rewrite
 
 Solution:
 ```php
+class Item
+{
+    public function __construct(
+        private float $price
+    ){}
 
+    public function getPrice(): float
+    {
+        return $this->price;
+    }
+}
+
+class PriceCalculator
+{
+    /**
+     * @param Item[] $items
+     */
+    public function __construct(private array $items)
+    {}
+
+    public function calculateItemsPrices(): float
+    {
+        $result = 0;
+        foreach ($this->items as $item) {
+            $result += $item->getPrice();
+        }
+
+        return $result;
+    }
+}
+
+class PriceCalculatorWithDiscount extends PriceCalculator
+{
+    private float $discount = 0.0;
+
+    public function calculateItemsPricesWithDiscount(): float
+    {
+        return parent::calculateItemsPrices() * (1 - $this->getDiscount());
+    }
+
+    public function getDiscount(): float
+    {
+        return $this->discount;
+    }
+
+    public function setDiscount(float $discount): self
+    {
+        $this->discount = $discount;
+        return $this;
+    }
+}
 ```
 
 Using:
