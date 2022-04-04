@@ -46,12 +46,11 @@ class Runner implements RunnerInterface
         echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 
         $priceFormatter = new PriceFormatter($items);
-        foreach ($priceFormatter->getFormattedPrices() as $i => $formattedPrice) {
-            echo sprintf('Item #%d - %s'.PHP_EOL, $i, $formattedPrice);
-        }
+        $formattedPrices = $priceFormatter->getFormattedPrices();
+        $formattedPricesWithSymbol = $priceFormatter->getFormattedPricesWithSymbol();
 
-        foreach ($priceFormatter->getFormattedPricesWithSymbol() as $i => $formattedPrice) {
-            echo sprintf('Item #%d - %s'.PHP_EOL, $i, $formattedPrice);
+        for($i = 0; $i < count($items); $i++){
+            echo sprintf('Item #%d - price %s, price with symbol %s'.PHP_EOL, $i, $formattedPrices[$i], $formattedPricesWithSymbol[$i]);
         }
     }
 
