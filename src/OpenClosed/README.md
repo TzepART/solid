@@ -59,14 +59,14 @@ class PriceCalculator
 Using:
 ```php
 $items = [
-    new ProblemItem(33.2),
-    new ProblemItemWithDiscount(55.2, 0.3),
-    new ProblemItemWithDiscount(133.2, 0.4),
-    new ProblemItem(3.2),
-    new ProblemItem(65.56),
+    new Item(33.2),
+    new ItemWithDiscount(55.2, 0.3),
+    new ItemWithDiscount(133.2, 0.4),
+    new Item(3.2),
+    new Item(65.56),
 ];
 
-$priceCalculator = new ProblemPriceCalculator($items);
+$priceCalculator = new PriceCalculator($items);
 echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 ```
 
@@ -152,14 +152,14 @@ class PriceCalculator
 Using:
 ```php
 $items = [
-    new SolutionItem(33.2),
-    new SolutionItemWithDiscount(55.2, 0.3),
-    new SolutionItemWithDiscount(133.2, 0.4),
-    new SolutionItem(3.2),
-    new SolutionItem(65.56),
+    new Item(33.2),
+    new ItemWithDiscount(55.2, 0.3),
+    new ItemWithDiscount(133.2, 0.4),
+    new Item(3.2),
+    new Item(65.56),
 ];
 
-$priceCalculator = new SolutionPriceCalculator($items);
+$priceCalculator = new PriceCalculator($items);
 echo sprintf('Order sum %01.2f'.PHP_EOL, $priceCalculator->calculateItemsPrices());
 ```
 

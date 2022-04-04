@@ -10,13 +10,10 @@ Using:
 
 ```
 
-Run:
+Run/Output:
 ```
-php solid_runner DIP
-```
+> php solid_runner DIP
 
-Output:
-```
 
 ```
 
@@ -32,7 +29,9 @@ Using:
 
 ```
 
-Output:
+Run/Output:
 ```
+> php solid_runner DIP
+
 
 ```

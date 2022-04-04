@@ -10,13 +10,10 @@ Using:
 
 ```
 
-Run:
+Run/Output:
 ```
-php solid_runner ISP
-```
+> php solid_runner ISP
 
-Output:
-```
 
 ```
 
@@ -32,7 +29,9 @@ Using:
 
 ```
 
-Output:
+Run/Output:
 ```
+> php solid_runner ISP
 
-```
+
+````
